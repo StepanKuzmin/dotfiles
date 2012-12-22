@@ -1,5 +1,11 @@
 export PATH="$HOME/Library/Haskell/bin:$PATH"
-export PATH="/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH"
+export PATH="/usr/local/Cellar/ruby/1.9.3-p327/bin:$PATH"
+
+# Tell ls to be colourful
+export CLICOLOR=1
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
 
 # Make vim the default editor
 export EDITOR="mvim"
@@ -14,11 +20,6 @@ export HISTCONTROL=ignoredups
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
-
-# Shortcuts
-alias ~="cd ~"
-alias v="mvim"
-alias o="open"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update'
@@ -39,5 +40,5 @@ shopt -s cdspell
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-# If possible, add tab completion for many more commands
-[ -f /etc/bash_completion ] && source /etc/bash_completion
+# Enable Generic Colouriser
+source "`brew --prefix grc`/etc/grc.bashrc"
