@@ -1,5 +1,6 @@
 export PATH="$HOME/Library/Haskell/bin:$PATH"
-export PATH="/usr/local/Cellar/ruby/1.9.3-p327/bin:$PATH"
+export PATH="/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH"
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # Tell ls to be colourful
 export CLICOLOR=1
