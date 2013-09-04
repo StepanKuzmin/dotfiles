@@ -1,6 +1,11 @@
 export PATH="$HOME/Library/Haskell/bin:$PATH"
-export PATH="/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH"
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export PATH="/usr/lib:$PATH"
+# export PATH="/usr/local/Cellar/ruby/2.0.0-p0/bin:$PATH"
+export PATH="/usr/local/Cellar/ruby/2.0.0-p195/bin:$PATH"
+export PATH="/usr/local/share/python:$PATH"
+export PATH="/opt/mapnik-osx/bin":$PATH
+export PATH="/usr/local/share/npm/bin":$PATH
+export PKG_CONFIG_PATH="/opt/mapnik-osx/lib/pkgconfig":$PKG_CONFIG_PATH
 
 # Tell ls to be colourful
 export CLICOLOR=1
@@ -21,6 +26,11 @@ export HISTCONTROL=ignoredups
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+alias tilemill="ssh -CA mapbox@new.mystand.ru -L 20009:localhost:20009 -L 20008:localhost:20008"
+
+alias pgstart="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pgstop="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update'
