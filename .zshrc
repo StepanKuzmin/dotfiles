@@ -5,6 +5,12 @@ colors
 
 prompt walters
 
+setopt share_history
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.history
+setopt APPEND_HISTORY
+
 # Tell ls to be colourful
 export CLICOLOR=1
 
