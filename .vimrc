@@ -7,6 +7,7 @@ set smartindent
 set foldenable
 set number
 set ts=2
+set vb
 
 " Make Vim more useful
 set nocompatible

@@ -1,15 +1,21 @@
-autoload -U compinit promptinit colors
+autoload -U compinit promptinit colors zsh-mime-setup
 compinit
 promptinit
 colors
+zsh-mime-setup
 
 prompt walters
+
+setopt CORRECT
 
 setopt share_history
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.history
 setopt APPEND_HISTORY
+
+# why would you type 'cd dir' if you could just type 'dir'?
+setopt AUTO_CD
 
 # Tell ls to be colourful
 export CLICOLOR=1
