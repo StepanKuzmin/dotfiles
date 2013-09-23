@@ -1,3 +1,6 @@
+autoload run-help
+HELPDIR=/usr/local/share/
+
 # PATH
 export PATH="/usr/local/share/npm/bin":$PATH
 export PATH="/usr/local/Cellar/ruby/2.0.0-p247/bin:$PATH"
@@ -8,6 +11,10 @@ compinit
 promptinit
 colors
 zsh-mime-setup
+
+# Open a new tab in the same directory
+precmd () {print -Pn "\e]2; %~/ \a"}
+preexec () {print -Pn "\e]2; %~/ \a"}
 
 # Zsh theme
 prompt walters
