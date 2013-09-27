@@ -4,6 +4,24 @@ HELPDIR=/usr/local/share/
 # PATH
 export PATH="/usr/local/share/npm/bin":$PATH
 export PATH="/usr/local/Cellar/ruby/2.0.0-p247/bin:$PATH"
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+# Tell ls to be colourful
+export CLICOLOR=1
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
 # ZSH
 autoload -U compinit promptinit colors zsh-mime-setup
@@ -31,25 +49,11 @@ setopt APPEND_HISTORY
 # why would you type 'cd dir' if you could just type 'dir'?
 setopt AUTO_CD
 
-# Tell ls to be colourful
-export CLICOLOR=1
-
-# Tell grep to highlight matches
-export GREP_OPTIONS='--color=auto'
-
 # Make vim the default editor
 export EDITOR="mvim"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
-
-# Larger bash history (allow 32³ entries; default is 500)
-export HISTSIZE=32768
-export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignoredups
-
-# Make some commands not show up in history
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
