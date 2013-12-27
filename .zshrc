@@ -2,8 +2,9 @@ autoload run-help
 HELPDIR=/usr/local/share/
 
 # PATH
+export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/share/npm/bin":$PATH
-export PATH="/usr/local/Cellar/ruby/2.0.0-p247/bin:$PATH"
+export PATH="/usr/local/Cellar/ruby193/1.9.3-p484/bin:$PATH"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # Tell ls to be colourful
@@ -40,7 +41,6 @@ prompt walters
 # Correct
 setopt CORRECT
 
-setopt share_history
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.history
@@ -50,7 +50,7 @@ setopt APPEND_HISTORY
 setopt AUTO_CD
 
 # Make vim the default editor
-export EDITOR="mvim"
+export EDITOR="vim"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
@@ -71,3 +71,5 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
