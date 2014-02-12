@@ -63,6 +63,9 @@ export LANG="en_US"
 source "`brew --prefix grc`/etc/grc.bashrc"
 
 # Aliases
+
+alias wow="git status"
+
 alias start-remote-tilemill="ssh -CA mapbox@new.mystand.ru -L 20009:localhost:20009 -L 20008:localhost:20008 -L 8888:localhost:8888"
 alias pgstart="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop"
