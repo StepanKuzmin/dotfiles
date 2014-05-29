@@ -3,8 +3,6 @@ HELPDIR=/usr/local/share/
 
 # PATH
 export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/share/npm/bin":$PATH
-export PATH="/usr/local/Cellar/ruby193/1.9.3-p484/bin:$PATH"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # Tell ls to be colourful
@@ -31,6 +29,12 @@ promptinit
 colors
 zsh-mime-setup
 
+# autocompletion with an arrow-key driven interface
+zstyle ':completion:*' menu select
+
+# autocompletion of command line switches for aliases
+setopt completealiases
+
 # Open a new tab in the same directory
 precmd () {print -Pn "\e]2; %~/ \a"}
 preexec () {print -Pn "\e]2; %~/ \a"}
@@ -45,6 +49,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.history
 setopt APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
 
 # why would you type 'cd dir' if you could just type 'dir'?
 setopt AUTO_CD
@@ -60,12 +65,14 @@ export LANG="en_US"
 source "`brew --prefix grc`/etc/grc.bashrc"
 
 # Aliases
-
 alias wow="git status"
+alias cp="cp -v"
+alias mkdir="mkdir -p"
 
 alias start-remote-tilemill="ssh -CA mapbox@new.mystand.ru -L 20009:localhost:20009 -L 20008:localhost:20008 -L 8888:localhost:8888"
-alias pgstart="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop"
+alias start-server="python -m SimpleHTTPServer 8000"
+alias start-pgsql="/usr/local/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias stop-pgsql="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop"
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
