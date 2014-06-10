@@ -29,6 +29,10 @@ promptinit
 colors
 zsh-mime-setup
 
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
+
 # autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
 
@@ -61,9 +65,6 @@ export EDITOR="vim"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-# Enable Generic Colouriser
-source "`brew --prefix grc`/etc/grc.bashrc"
-
 # Aliases
 alias wow="git status"
 alias cp="cp -v"
@@ -76,7 +77,15 @@ alias stop-pgsql="/usr/local/bin/pg_ctl -D /usr/local/var/postgres stop"
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
+# Enable Generic Colouriser
+source "`brew --prefix grc`/etc/grc.bashrc"
+
 fpath=(/usr/local/share/zsh-completions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# bind UP and DOWN arrow keys
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
