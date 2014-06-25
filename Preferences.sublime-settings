@@ -1,32 +1,15 @@
 {
-	// The number of spaces a tab is considered equal to
-	"tab_size": 2,
-
-	// Set to true to insert spaces when tab is pressed
-	"translate_tabs_to_spaces": true,
-
-  // Set to true to automatically save files when switching to a different file
-  // or application
-  "save_on_focus_lost": true,
-
-  // Controls side bar animation when expanding or collapsing folders
-  "tree_animation_enabled": false,
-
-  // Controls animation throughout the application
-  "animation_enabled": false,
-
-  // Display file encoding in the status bar
-  "show_encoding": true,
-
-  // OS X only: This controls if an empty window is created at startup or not.
-  "create_window_at_startup": false,
-
-  // Preview file contents when clicking on a file in the side bar. Double
-  // clicking or editing the preview will open the file and assign it a tab.
-  "preview_on_click": false,
-
+	"animation_enabled": false,
+	"close_windows_when_empty": true,
+	"create_window_at_startup": false,
 	"ignored_packages":
 	[
 		"Vintage"
-	]
+	],
+	"preview_on_click": false,
+	"save_on_focus_lost": true,
+	"show_encoding": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"tree_animation_enabled": false
 }
