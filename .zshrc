@@ -63,6 +63,12 @@ HISTFILE=~/.history
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 
+# To retrieve the history file everytime history is called upon
+setopt share_history
+
+# To save every command before it is executed
+setopt inc_append_history
+
 # why would you type 'cd dir' if you could just type 'dir'?
 setopt AUTO_CD
 
