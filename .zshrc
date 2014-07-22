@@ -48,6 +48,18 @@ zstyle ':completion:*' menu select
 # list of completers to use
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 
+# Fallback to built in ls colors
+zstyle ':completion:*' list-colors ''
+
+# SSH Host Completion 
+zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
+
+# Autocomplete for kill\killall
+compdef pkill=kill
+compdef pkill=killall
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:processes' command 'ps -au$USER'
+
 # autocompletion of command line switches for aliases
 setopt completealiases
 
@@ -81,6 +93,9 @@ setopt inc_append_history
 
 # why would you type 'cd dir' if you could just type 'dir'?
 setopt AUTO_CD
+
+# Avoid beeping
+setopt nobeep 
 
 # Enable Generic Colouriser
 source "`brew --prefix grc`/etc/grc.bashrc"
