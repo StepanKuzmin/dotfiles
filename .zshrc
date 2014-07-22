@@ -3,6 +3,7 @@ HELPDIR=/usr/local/share/
 
 # PATH
 export PATH="/usr/local/bin:$PATH"
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin/
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # Add GHC 7.8.2 to the PATH, via http://ghcformacosx.github.io/
@@ -44,12 +45,19 @@ HELPDIR=/usr/local/share/zsh/helpfiles
 # autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
 
+# list of completers to use
+zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
+
 # autocompletion of command line switches for aliases
 setopt completealiases
 
 # Open a new tab in the same directory
 precmd () {print -Pn "\e]2; %~/ \a"}
 preexec () {print -Pn "\e]2; %~/ \a"}
+
+# bind UP and DOWN arrow keys
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Zsh theme
 prompt walters
@@ -58,10 +66,12 @@ prompt walters
 setopt CORRECT
 
 HISTSIZE=1000
-SAVEHIST=1000
+SAVEHIST=$HISTSIZE
 HISTFILE=~/.history
 setopt APPEND_HISTORY
-setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_ALL_DUPS
 
 # To retrieve the history file everytime history is called upon
 setopt share_history
@@ -72,25 +82,6 @@ setopt inc_append_history
 # why would you type 'cd dir' if you could just type 'dir'?
 setopt AUTO_CD
 
-# Make vim the default editor
-export EDITOR="vim"
-
-# Prefer US English and use UTF-8
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US"
-
-# Aliases
-alias cp="cp -v"
-alias dh='dirs -v'
-alias wow="git status"
-alias mkdir="mkdir -p"
-
-alias start-remote-tilemill="ssh -CA mapbox@new.mystand.ru -L 20009:localhost:20009 -L 20008:localhost:20008 -L 8888:localhost:8888"
-alias start-server="python -m SimpleHTTPServer 8000"
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
-alias psql="/Applications/Postgres.app/Contents/Versions/9.3/bin/psql"
-
 # Enable Generic Colouriser
 source "`brew --prefix grc`/etc/grc.bashrc"
 
@@ -98,9 +89,18 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# bind UP and DOWN arrow keys
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# Aliases
+alias cp="cp -v"
+alias dh='dirs -v'
+alias ll='ls -alFh'
+alias wow="git status"
+alias mkdir="mkdir -p"
+
+alias start-server="python -m SimpleHTTPServer 8000"
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias start-remote-tilemill="ssh -CA mapbox@new.mystand.ru -L 20009:localhost:20009 -L 20008:localhost:20008 -L 8888:localhost:8888"
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
 
 p() { 
   cd ~/Development/projects/$*
