@@ -3,6 +3,7 @@ HELPDIR=/usr/local/share/
 
 # PATH
 export PATH="/usr/local/bin:$PATH"
+export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin/
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
