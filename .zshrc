@@ -30,6 +30,9 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
+# Set Emacs keydindings
+set -o emacs
+
 # ZSH
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
