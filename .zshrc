@@ -43,6 +43,10 @@ promptinit
 colors
 zsh-mime-setup
 
+# Open a new tab in the same directory
+precmd () {print -Pn "\e]2; %~/ \a"}
+preexec () {print -Pn "\e]2; %~/ \a"}
+
 autoload run-help
 HELPDIR=/usr/local/share/zsh/helpfiles
 
@@ -67,9 +71,9 @@ zstyle ':completion:*:processes' command 'ps -au$USER'
 # autocompletion of command line switches for aliases
 setopt completealiases
 
-# Open a new tab in the same directory
-precmd () {print -Pn "\e]2; %~/ \a"}
-preexec () {print -Pn "\e]2; %~/ \a"}
+bindkey -e
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
 
 # bind UP and DOWN arrow keys
 bindkey '^[[A' history-substring-search-up

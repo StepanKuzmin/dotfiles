@@ -33,6 +33,7 @@
 		".git",
 		".hg",
 		"CVS",
+		".sass-cache",
 		"node_modules",
 		"bower_components"
 	],
@@ -40,7 +41,8 @@
 	"font_size": 12,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"preview_on_click": false,
 	"save_on_focus_lost": true,
