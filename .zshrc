@@ -133,4 +133,6 @@ _projects_cpl() {
 }
 compctl -K _projects_cpl p
 
+quit () { osascript -e "quit app \"$1\"" }
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
