@@ -128,11 +128,21 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 p() { 
   cd ~/Development/projects/$*
 }
+
 _projects_cpl() {
   reply=($(ls ~/Development/projects))
 }
+
 compctl -K _projects_cpl p
 
-quit () { osascript -e "quit app \"$1\"" }
+quit () { osascript -e "quit app \"$*\"" }
+
+_quit_cpl() {
+  # reply=($(ls /Applications | sed 's/.app//g'))
+  reply=($(find /Applications -iname '*.app' -exec basename {} \; | sed 's/.app//g'))
+}
+
+compctl -K _quit_cpl quit
+
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
