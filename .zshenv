@@ -5,4 +5,34 @@ export LANG="en_US"
 # Make vim the default editor
 export EDITOR="vim"
 
+# PATH
+export PATH="/usr/local/bin:$PATH"
+# export JAVA_HOME="$(/usr/libexec/java_home)"
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+# Tell ls to be colourful
+export CLICOLOR=1
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export NVM_DIR="/Users/stepan/.nvm"
+export NVM_SYMLINK_CURRENT=true
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+nvm use 0.10 
+
 skip_global_compinit=1

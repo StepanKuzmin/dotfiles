@@ -2,6 +2,7 @@
 	"animation_enabled": false,
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
+	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 	"create_window_at_startup": false,
 	"enable_tab_scrolling": false,
 	"file_exclude_patterns":
@@ -40,7 +41,7 @@
 	],
 	"font_face": "Menlo Regular",
 	"font_size": 12,
-  "highlight_line": true,
+	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Markdown",
