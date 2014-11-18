@@ -1,5 +1,8 @@
 # Set up Sublime
 ln -s "/Users/stepan/Documents/dotfiles/Preferences.sublime-settings" "/Users/stepan/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+ln -s "/Users/stepan/Documents/dotfiles/SublimeREPL.sublime-settings" "/Users/stepan/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings" 
+
+# Set up OS X
 
 # Allowing text selection in Quick Look/Preview in Finder by default
 defaults write com.apple.finder QLEnableTextSelection -bool true

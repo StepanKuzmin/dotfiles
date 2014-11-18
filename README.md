@@ -9,6 +9,7 @@
 * Jade
 * Stylus
 * GitGutter
+* SublimeREPL
 * Better CoffeeScript
 * SublimeLinter
 * SublimeLinter-coffee
