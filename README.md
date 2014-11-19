@@ -10,6 +10,7 @@
 * Stylus
 * GitGutter
 * SublimeREPL
+* MarkdownEditing
 * Better CoffeeScript
 * SublimeLinter
 * SublimeLinter-coffee
