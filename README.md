@@ -6,11 +6,14 @@
 
 ## Sublime Text 3 plugins
 
+* Git
 * Jade
 * Stylus
+* Ruby Slim
 * GitGutter
 * SublimeREPL
 * MarkdownEditing
+* BracketHighlighter
 * Better CoffeeScript
 * SublimeLinter
 * SublimeLinter-coffee

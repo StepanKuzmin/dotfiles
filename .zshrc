@@ -78,6 +78,7 @@ setopt nobeep
 source "`brew --prefix grc`/etc/grc.bashrc"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh/site-functions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
 
@@ -90,3 +91,4 @@ _projects_cpl() {
 }
 
 compctl -K _projects_cpl p
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
