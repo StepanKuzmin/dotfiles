@@ -11,9 +11,11 @@
 * Stylus
 * Ruby Slim
 * GitGutter
+* EasyMotion
 * SublimeREPL
 * MarkdownEditing
 * BracketHighlighter
+* SideBarEnhancements
 * Better CoffeeScript
 * SublimeLinter
 * SublimeLinter-coffee
