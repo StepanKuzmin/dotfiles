@@ -9,8 +9,8 @@ export EDITOR="vim"
 export PATH="/usr/local/bin:$PATH"
 # export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH=$PATH:/Library/Frameworks/GDAL.framework/Programs
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # Tell ls to be colourful
 export CLICOLOR=1
@@ -35,6 +35,6 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 export NVM_DIR="/Users/stepan/.nvm"
 export NVM_SYMLINK_CURRENT=true
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use 0.10 
+nvm use 0.10
 
 skip_global_compinit=1

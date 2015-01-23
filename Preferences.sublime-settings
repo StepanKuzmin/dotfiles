@@ -38,16 +38,16 @@
 		"CVS",
 		".sass-cache",
 		".capistrano",
-		"node_modules",
-		"bower_components"
+		"node_modules"
 	],
 	"font_face": "Menlo Regular",
 	"font_size": 12,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Markdown",
-		"Vintage"
+		"Vintage",
+		"Terminal",
+		"Markdown"
 	],
 	"preview_on_click": false,
 	"save_on_focus_lost": true,

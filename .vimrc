@@ -49,8 +49,6 @@ set ruler
 syntax on
 filetype plugin indent on
 
-filetype plugin on
-filetype indent on
 let g:tex_flavor='latex'
 if has("autocmd")
 	augroup module

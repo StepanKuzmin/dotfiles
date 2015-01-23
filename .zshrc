@@ -28,7 +28,7 @@ zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 # Fallback to built in ls colors
 zstyle ':completion:*' list-colors ''
 
-# SSH Host Completion 
+# SSH Host Completion
 zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
 # Autocomplete for kill\killall
@@ -72,7 +72,7 @@ setopt inc_append_history
 setopt AUTO_CD
 
 # Avoid beeping
-setopt nobeep 
+setopt nobeep
 
 # Enable Generic Colouriser
 source "`brew --prefix grc`/etc/grc.bashrc"
@@ -82,7 +82,7 @@ fpath=(/usr/local/share/zsh/site-functions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-p() { 
+p() {
   cd ~/Documents/projects/$*
 }
 
