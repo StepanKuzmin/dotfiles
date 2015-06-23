@@ -29,6 +29,7 @@
 * [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter)
 * [SublimeLinter-coffee](https://packagecontrol.io/packages/SublimeLinter-coffee)
 * [SublimeLinter-coffeelint](https://packagecontrol.io/packages/SublimeLinter-coffeelint)
+* [PackageResourceViewer](https://github.com/skuroda/PackageResourceViewer)
 
 ### Abandoned
 

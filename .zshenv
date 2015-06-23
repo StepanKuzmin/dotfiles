@@ -7,7 +7,6 @@ export EDITOR="vim"
 
 # PATH
 export PATH="/usr/local/bin:$PATH"
-# export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH=$PATH:/Library/Frameworks/GDAL.framework/Programs
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
@@ -29,6 +28,9 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -36,5 +38,9 @@ export NVM_DIR="/Users/stepan/.nvm"
 export NVM_SYMLINK_CURRENT=true
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm use 0.10
+
+export LEIN_FAST_TRAMPOLINE=y
+
+export HOMEBREW_GITHUB_API_TOKEN="fbbe1cc7e418c4d982b294d6e083ba2b1a4c9b10"
 
 skip_global_compinit=1

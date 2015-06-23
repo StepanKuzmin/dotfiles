@@ -54,7 +54,7 @@ prompt walters
 # Correct
 setopt CORRECT
 
-HISTSIZE=1000
+HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 HISTFILE=~/.history
 setopt APPEND_HISTORY
@@ -82,13 +82,29 @@ fpath=(/usr/local/share/zsh/site-functions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/opt/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+whothefuckisusingport() {
+  lsof -i tcp:$*
+}
+
+anybar() {
+  echo -n $1 | nc -4u -w0 localhost ${2:-1738};
+}
+
+d() {
+  cd ~/Documents/data/$*
+}
+
 p() {
   cd ~/Documents/projects/$*
+}
+
+_data_cpl() {
+  reply=($(ls ~/Documents/data))
 }
 
 _projects_cpl() {
   reply=($(ls ~/Documents/projects))
 }
 
+compctl -K _data_cpl d
 compctl -K _projects_cpl p
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
