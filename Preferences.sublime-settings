@@ -37,9 +37,7 @@
 		".hg",
 		"CVS",
 		".sass-cache",
-		".capistrano",
-		"bower_components",
-		"node_modules"
+		".capistrano"
 	],
 	"font_face": "Menlo Regular",
 	"font_size": 12,
@@ -47,8 +45,8 @@
 	"ignored_packages":
 	[
 		"Markdown",
-		"Terminal",
-		"Vintage"
+		"Vintage",
+		"Terminal"
 	],
 	"preview_on_click": false,
 	"save_on_focus_lost": true,

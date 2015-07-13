@@ -1,6 +1,11 @@
 # Set up Sublime
-ln -s "/Users/stepan/Documents/dotfiles/Preferences.sublime-settings" "/Users/stepan/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-ln -s "/Users/stepan/Documents/dotfiles/SublimeREPL.sublime-settings" "/Users/stepan/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings" 
+ln -s "~/Dropbox/dotfiles/Preferences.sublime-settings" "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+ln -s "~/Dropbox/dotfiles/SublimeREPL.sublime-settings" "~/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings"
+
+# Set up shell
+ln -s '~/Dropbox/dotfiles/.zprofile' '~/.zprofile'
+ln -s '~/Dropbox/dotfiles/.zshrc' '~/.zshrc'
+ln -S '~/Dropbox/dotfiles/.zshenv' '~/.zshenv'
 
 # Set up OS X
 

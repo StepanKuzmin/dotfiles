@@ -91,20 +91,22 @@ anybar() {
 }
 
 d() {
-  cd ~/Documents/data/$*
+  cd ~/Dropbox/data/$*
 }
 
 p() {
-  cd ~/Documents/projects/$*
+  cd ~/Dropbox/projects/$*
 }
 
 _data_cpl() {
-  reply=($(ls ~/Documents/data))
+  reply=($(ls ~/Dropbox/data))
 }
 
 _projects_cpl() {
-  reply=($(ls ~/Documents/projects))
+  reply=($(ls ~/Dropbox/projects))
 }
 
 compctl -K _data_cpl d
 compctl -K _projects_cpl p
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
