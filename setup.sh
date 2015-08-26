@@ -1,6 +1,6 @@
 # Set up Sublime
-ln -s "~/Dropbox/dotfiles/Preferences.sublime-settings" "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-ln -s "~/Dropbox/dotfiles/SublimeREPL.sublime-settings" "~/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings"
+ln -s ~/Dropbox/dotfiles/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
+ln -s ~/Dropbox/dotfiles/SublimeREPL.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/SublimeREPL.sublime-settings
 
 # Set up shell
 ln -s '~/Dropbox/dotfiles/.zprofile' '~/.zprofile'
