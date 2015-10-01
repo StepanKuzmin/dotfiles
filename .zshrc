@@ -90,20 +90,12 @@ anybar() {
   echo -n $1 | nc -4u -w0 localhost ${2:-1738};
 }
 
-d() {
-  cd ~/Dropbox/data/$*
-}
-
 p() {
-  cd ~/Dropbox/projects/$*
-}
-
-_data_cpl() {
-  reply=($(ls ~/Dropbox/data))
+  cd ~/Documents/projects/$*
 }
 
 _projects_cpl() {
-  reply=($(ls ~/Dropbox/projects))
+  reply=($(ls ~/Documents/projects))
 }
 
 compctl -K _data_cpl d

@@ -45,4 +45,7 @@ export NVM_SYMLINK_CURRENT=true
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 nvm use 0.10
 
+ulimit -n 1024
+ulimit -u 1024
+
 skip_global_compinit=1

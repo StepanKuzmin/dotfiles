@@ -1,11 +1,17 @@
-# Set up Sublime
-ln -s ~/Dropbox/dotfiles/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
-ln -s ~/Dropbox/dotfiles/SublimeREPL.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/SublimeREPL.sublime-settings
+HOME_PATH=~
+SUBLIME_PATH=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 
-# Set up shell
-ln -s '~/Dropbox/dotfiles/.zprofile' '~/.zprofile'
-ln -s '~/Dropbox/dotfiles/.zshrc' '~/.zshrc'
-ln -S '~/Dropbox/dotfiles/.zshenv' '~/.zshenv'
+# Set up zsh
+ln -s `pwd`/.zshrc $HOME_PATH
+ln -s `pwd`/.zshenv $HOME_PATH
+ln -s `pwd`/.zprofile $HOME_PATH
+
+# Set up tmux
+ln -s `pwd`/.tmux.conf $HOME_PATH
+
+# Set up Sublime 3
+ln -s `pwd`/Preferences.sublime-settings $SUBLIME_PATH
+ln -s `pwd`/SublimeREPL.sublime-settings $SUBLIME_PATH
 
 # Set up OS X
 

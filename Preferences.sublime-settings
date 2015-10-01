@@ -47,9 +47,9 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Markdown",
 		"Terminal",
-		"Vintage",
-		"Markdown"
+		"Vintage"
 	],
 	"preview_on_click": false,
 	"save_on_focus_lost": true,
